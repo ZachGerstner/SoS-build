@@ -21,14 +21,10 @@ sudo apt-get update
 cg=$(sudo apt --installed list | grep "clang")
 uu=$(sudo apt --installed list | grep "uuid-dev")
 lx=$(sudo apt --installed list | grep "libxml2-dev")
-if [ -z $eg ]
-then 
+if [ -z $cg ] || [ -z $uu ] || [-z $lx ];
+then
 	sudo apt-get install clang -y
-elif [ -z $uu ]
-then 
 	sudo apt-get install uuid-dev -y
-elif [ -z $lx ]
-then 
 	sudo apt-get install libxml2-dev -y
 else
 	echo 'Dependency install complete, 5 second rest to exit should errors occur.'
