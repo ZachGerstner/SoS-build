@@ -8,7 +8,7 @@ PARTNER_IP=192.168.2.2
 #Should be Automatic From this point on  more or less               #
 #####################################################################
 echo 'Before running this script check the following :'
-echo "	1. The script variables are set to the correctly.
+echo "	1. The script variables are set correctly.
 	2. Ovs is properly installed (ovs-vswitchd --version)
 	3. The controller has been properly configured and is running"
 echo 'You have 5 seconds to exit to make any necessary adjustments.'
