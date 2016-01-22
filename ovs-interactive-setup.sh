@@ -3,7 +3,7 @@
 CONTROLLER_IP=130.127.38.2
 CONTROLLER_PORT=6011
 DESIRED_IP=192.168.2.1/24
-PARTER_IP=192.168.2.2
+PARTNER_IP=192.168.2.2
 #####################################################################
 #Should be Automatic From this point on  more or less               #
 #####################################################################
@@ -70,7 +70,9 @@ then
 		sudo git clone http://github.com/cbarrin/sos-agent 
 		cd ./sos-agent
 		sudo make 
-		./run.sh
+		echo 'Instillation complete.'
+		echo 'To run the SoS agent run ./run.sh.'
+		echo 'Recommended that you do so from a screen session.'
 	else
 		echo 'Input not recognized! Exiting now'
 		exit
