@@ -53,7 +53,7 @@ sleep 5
 echo 'Installing SoS Agents now...'
 sudo git clone http://github.com/cbarrin/sos-agent 
 cd ./sos-agent
-perl -p -i -e 's/10.0.255/192.168.2.255/g' ./common.h
+sudo perl -p -i -e 's/10.0.255/192.168.2.255/g' ./common.h
 sudo make 
 echo 'Instillation complete.'
 echo 'To run the SoS agent run ./run.sh.'
