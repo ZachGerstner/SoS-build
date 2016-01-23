@@ -4,6 +4,7 @@ CONTROLLER_IP=130.127.38.2
 CONTROLLER_PORT=6011
 DESIRED_IP=192.168.2.1/24
 PARTNER_IP=192.168.2.2
+#Go To line 56 change the perl command as needed
 #####################################################################
 #Should be Automatic From this point on  more or less               #
 #####################################################################
@@ -52,6 +53,7 @@ sleep 5
 echo 'Installing SoS Agents now...'
 sudo git clone http://github.com/cbarrin/sos-agent 
 cd ./sos-agent
+perl -p -i -e 's/10.0.255/192.168.2.255/g' ./common.h
 sudo make 
 echo 'Instillation complete.'
 echo 'To run the SoS agent run ./run.sh.'
